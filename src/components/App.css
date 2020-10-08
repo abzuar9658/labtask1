@@ -1,0 +1,11 @@
+.App {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.table{
+    width: 40%;
+}
+.form{
+    width: 40%;
+}
