@@ -11,7 +11,7 @@ class App extends Component{
     this.state = {
       name : '',
       genedr: '',
-      age: -1,
+      age: '',
       city: '',
       persons: []
     }
@@ -50,8 +50,12 @@ class App extends Component{
     })
   }
   handleReset = (onSubmitProps) => {
-    console.log('Reset clicked')
-    onSubmitProps.resetForm();
+    this.setState({
+      name: '',
+      age: '',
+      city: '',
+      gender: '',
+    })
   };
   render(){
     return (
@@ -61,7 +65,7 @@ class App extends Component{
           <TableComponent persons = {this.state.persons}/>
         </div>        
         <div className='form'>
-          <AddDropForm setName = {this.setName} setAge = {this.setAge} setCity = {this.setCity} setGender = {this.setGender} handleSubmit = {this.handleSubmit} handleReset = {this.handleReset}/>
+          <AddDropForm name = {this.state.name} age = {this.state.age} city = {this.state.city} gender = {this.state.gender}setName = {this.setName} setAge = {this.setAge} setCity = {this.setCity} setGender = {this.setGender} handleSubmit = {this.handleSubmit} handleReset = {this.handleReset}/>
         </div>  
         </div> 
       </div>

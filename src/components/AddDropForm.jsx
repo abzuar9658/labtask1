@@ -15,24 +15,26 @@ const cityOptions = [
   ]
   
 
-const AddDropForm = ({setName , setAge, setCity , setGender, handleSubmit, handleReset})=>{
+const AddDropForm = ({name,age,city,gender,setName , setAge, setCity , setGender, handleSubmit, handleReset})=>{
     return (
         <Container >
         <h2>Add/Drop Form</h2>
         <Form>
-          <Form.Input fluid name = 'name' label='Enter Name' placeholder='Name' onChange = {setName}/>
+          <Form.Input fluid name = 'name' value = {name} label='Enter Name' placeholder='Name' onChange = {setName}/>
           <Form.Select
             fluid
             name = 'gender'
+            value = {gender}
             label='Gender'
             options={genderOptions}
             placeholder='Gender'
             onChange = {setGender}
           />
-          <Form.Input fluid name = 'age' label='Enter Age' placeholder='Age' onChange = {setAge}/>
+          <Form.Input fluid name = 'age' value = {age} label='Enter Age' placeholder='Age' onChange = {setAge}/>
           <Form.Select
             fluid
             name = 'city'
+            value = {city}
             label='City'
             options={cityOptions}
             placeholder='City'
